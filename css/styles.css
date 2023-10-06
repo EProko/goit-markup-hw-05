@@ -555,17 +555,14 @@ h2 {
   padding-left: 16px;
   border-radius: 4px;
   border: 1px solid #fff;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  background-color: #2e2f42;
+  filter: box-shadow 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 .subscribe-input::placeholder {
   color: #fff;
-  font-family: Roboto;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 2;
-  letter-spacing: 0.48px;
 }
 
 .button-footer {
@@ -599,11 +596,11 @@ h2 {
 
 /* Modal */
 
-.is-hidden {
+/* .is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-}
+} */
 
 .backdrop {
   position: fixed;
@@ -622,8 +619,8 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  box-shadow: зі значенням 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: #fcfcfc;
   border-radius: 4px;
@@ -708,6 +705,10 @@ h2 {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-input:focus {
+  border-color: #4d5ae5;
+}
+
 .icon-modal {
   position: absolute;
   left: 16px;
@@ -734,12 +735,11 @@ h2 {
   background-color: transparent;
   outline: transparent;
   resize: none;
-  outline: none;
+  outline: transparent;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input-comment:focus,
-.modal-input:focus {
+.modal-input-comment:focus {
   border-color: #4d5ae5;
 }
 
@@ -774,7 +774,7 @@ h2 {
   background-color: #4d5ae5;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   margin: 0 auto;
-  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-modal:hover {
@@ -805,8 +805,8 @@ h2 {
 }
 
 .checkbox-inpnt:checked + .user-privacy .checkbox-span-border {
-  border: none;
   background-color: #404bbf;
+  border: none;
   fill: #f4f4fd;
 }
 
